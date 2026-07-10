@@ -1,0 +1,6 @@
+{
+  "name": "Shimaa Vafaei Makeup Academy",
+  "description": "مدرسه میکاپ شیما وفایی - آکادمی تخصصی آرایشگری و میکاپ با استانداردهای بین‌المللی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

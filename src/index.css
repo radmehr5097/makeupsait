@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Vazirmatn:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-rose: #D4A574;
+  --color-brand-rose-light: #E8C4A0;
+  --color-brand-rose-dark: #B8835A;
+  --color-brand-gold: #C9A227;
+  --color-brand-gold-light: #E5C76B;
+  --color-brand-cream: #FAF7F2;
+  --color-brand-cream-dark: #F0EAE1;
+  --color-brand-charcoal: #1A1A1A;
+  --color-brand-charcoal-light: #2D2D2D;
+  --color-brand-charcoal-soft: #3D3D3D;
+  
+  --shadow-gold-glow: 0 8px 32px rgba(201, 162, 39, 0.25);
+  
+  --font-display: "Playfair Display", "Vazirmatn", serif;
+  --font-sans: "Vazirmatn", sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@utility glass-light {
+  backdrop-filter: blur(24px);
+  background-color: rgba(250, 247, 242, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(212, 165, 116, 0.05);
+}
+
+@utility glass-dark {
+  backdrop-filter: blur(24px);
+  background-color: rgba(26, 26, 26, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+@utility glass-text-shadow {
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+}
+
+@utility perspective-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom global styles */
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4A574;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8835A;
+}
+
+/* Custom Selection */
+::selection {
+  background: rgba(212, 165, 116, 0.3);
+  color: inherit;
+}
+
